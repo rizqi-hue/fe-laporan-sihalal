@@ -87,7 +87,9 @@ const HeaderLogged: FC<HeaderLoggedProps> = () => {
               <div></div>
               <div className="hidden sm:block h-6 border-l border-neutral-300 dark:border-neutral-6000"></div>
               <div></div>
-              <ButtonPrimary href={"/login"} sizeClass="px-4 py-2 sm:px-5">Masuk</ButtonPrimary>
+              <ButtonPrimary href={"/login"} sizeClass="px-4 py-2 sm:px-5">
+                Masuk
+              </ButtonPrimary>
               <ButtonSecondary href={"/register"} sizeClass="px-4 py-2 sm:px-5">
                 Daftar
               </ButtonSecondary>
@@ -96,7 +98,7 @@ const HeaderLogged: FC<HeaderLoggedProps> = () => {
             <div className="flex items-center space-x-3 xl:hidden">
               {/* <NotifyDropdown />
               <AvatarDropdown /> */}
-              <MenuBar /> 
+              <MenuBar />
             </div>
           </div>
         </div>

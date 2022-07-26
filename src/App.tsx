@@ -1,19 +1,3 @@
-// import React from "react";
-// import "./App.css";
-// import { HeaderLogged } from "./components";
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <div className="bg-white text-base dark:bg-neutral-900 text-neutral-900 dark:text-neutral-200">
-//         <HeaderLogged />
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default App;
-
 import * as React from "react";
 import {
   Routes,
@@ -29,6 +13,7 @@ import {
 import { fakeAuthProvider } from "./auth";
 import { HeaderLogged } from "./components";
 import { Login } from "./modules/Auth";
+import Register from "./modules/Auth/pages/Register";
 import { Home } from "./modules/Home";
 
 export default function App() {
@@ -39,7 +24,9 @@ export default function App() {
           <Route element={<Layout />}>
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
           </Route>
+
           <Route
             path="/protected"
             element={
@@ -57,17 +44,7 @@ export default function App() {
 function Layout() {
   return (
     <div>
-      {/* <AuthStatus /> */}
       <HeaderLogged />
-      {/* <ul>
-        <li>
-          <Link to="/">Public Page</Link>
-        </li>
-        <li>
-          <Link to="/protected">Protected Page</Link>
-        </li>
-      </ul> */}
-
       <Outlet />
     </div>
   );
