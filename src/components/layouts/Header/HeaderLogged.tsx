@@ -9,7 +9,8 @@ import {
 } from "../../atoms";
 import { BellIcon, ShoppingBagIcon } from "@heroicons/react/solid";
 import MenuBar from "../MenuBar";
-export interface HeaderLoggedProps {}
+import Button from "../../atoms/Button/Button";
+export interface HeaderLoggedProps { }
 
 const HeaderLogged: FC<HeaderLoggedProps> = () => {
   return (
@@ -18,7 +19,9 @@ const HeaderLogged: FC<HeaderLoggedProps> = () => {
         <div className="container py-3 relative flex justify-between items-center space-x-4 xl:space-x-8">
           <div className="flex justify-start flex-grow items-center space-x-3 sm:space-x-8 lg:space-x-10">
             <HeaderLogo />
-            <div className="hidden sm:block flex-grow max-w-xl">
+
+            {/* Search Bar */}
+            {/* <div className="hidden sm:block flex-grow max-w-xl"> 
               <div className="container">
                 <header className="max-w-2xl mx-auto  flex flex-col ">
                   <form className="relative w-full " method="post">
@@ -68,7 +71,9 @@ const HeaderLogged: FC<HeaderLoggedProps> = () => {
                   </form>
                 </header>
               </div>
-            </div>
+            </div> */}
+            {/* End Search Bar */}
+
           </div>
           <div className="flex-shrink-0 flex items-center justify-end text-neutral-700 dark:text-neutral-100 space-x-1">
             <div className="hidden items-center xl:flex space-x-2">
@@ -78,7 +83,7 @@ const HeaderLogged: FC<HeaderLoggedProps> = () => {
                 <NotifyDropdown /> */}
                 {/* <span className="w-2 h-2 bg-blue-500 absolute top-2 right-2 rounded-full"></span> */}
               </div>
-              <ButtonIcon sizeClass="px-2 py-2">
+              {/* <ButtonIcon sizeClass="px-2 py-2">
                 <BellIcon className="w-7 text-gray-300 hover:text-primary-6000" />
               </ButtonIcon>
               <ButtonIcon sizeClass="px-2 py-2">
@@ -86,13 +91,22 @@ const HeaderLogged: FC<HeaderLoggedProps> = () => {
               </ButtonIcon>
               <div></div>
               <div className="hidden sm:block h-6 border-l border-neutral-300 dark:border-neutral-6000"></div>
-              <div></div>
-              <ButtonPrimary href={"/login"} sizeClass="px-4 py-2 sm:px-5">
+              <div></div> */}
+              <Button href={"/login"} sizeClass="px-4 py-2 sm:px-5">
+                Informasi
+              </Button>
+              <Button href={"/register"} sizeClass="px-4 py-2 sm:px-5">
+                Kontak
+              </Button>
+              <Button href={"/login"} sizeClass="px-4 py-2 sm:px-5">
+                FaQ
+              </Button>
+              {/* <ButtonPrimary href={"/login"} sizeClass="px-4 py-2 sm:px-5">
                 Masuk
               </ButtonPrimary>
               <ButtonSecondary href={"/register"} sizeClass="px-4 py-2 sm:px-5">
                 Daftar
-              </ButtonSecondary>
+              </ButtonSecondary> */}
               {/* <AvatarDropdown /> */}
             </div>
             <div className="flex items-center space-x-3 xl:hidden">

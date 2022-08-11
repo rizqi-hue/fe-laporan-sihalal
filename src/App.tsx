@@ -15,6 +15,12 @@ import { HeaderLogged } from "./components";
 import { Login } from "./modules/Auth";
 import Register from "./modules/Auth/pages/Register";
 import { Home } from "./modules/Home";
+import Dashboard from "./modules/Auth/pages/Dashboard";
+import SertifikasiHalal from "./modules/Auth/pages/SertifikasiHalal";
+import DataPelatihan from "./modules/Auth/pages/DataPelatihan";
+import DataLPH from "./modules/Auth/pages/DataLPH";
+import DataPendampinganPPH from "./modules/Auth/pages/DataPendampinganPPH";
+
 
 export default function App() {
   return (
@@ -22,9 +28,14 @@ export default function App() {
       <BrowserRouter>
         <Routes>
           <Route element={<Layout />}>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/sertifikasihalal" element={<SertifikasiHalal />} />
+            <Route path="/datapelatihan" element={<DataPelatihan />} />
+            <Route path="/datalph" element={<DataLPH />} />
+            <Route path="/datapendampinganpph" element={<DataPendampinganPPH />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
+            
           </Route>
 
           <Route
